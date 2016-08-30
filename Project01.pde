@@ -6,7 +6,7 @@ float fuckT = 100;
 
 void setup()
 {
-  size (400, 530);
+  size (400, 530, P3D);
   background(255);
   
   translate(width/2, height/2);
@@ -43,7 +43,16 @@ void setup()
     theta3 += PI/180/(500.0/180.0);
   }
   
+   for (int i = 0; i< 50; i ++)
+  {
+    float r = -log(theta5)*125;
+    box(r*0.3, r*2, r*1.4);
+    theta5 += PI/180/(500.0/180.0);
+  }
+  
 }
+
+
 
 void draw()
 {
