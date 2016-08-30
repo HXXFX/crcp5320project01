@@ -18,7 +18,7 @@ void setup()
   float theta4 = 0.0;
   float theta5 = 0.0;
   float theta6 = 0.0;
-  stroke(0, 30);
+  stroke(0, 50);
   noFill();
 
 
@@ -50,6 +50,14 @@ void setup()
     theta5 += PI/180/(500.0/180.0);
   }
   
+   for (int i = 0; i< 500; i ++)
+  {
+    float r = -log(theta6)*125;
+    box(r*0.8);
+    theta6 += PI/180/(500.0/180.0);
+    translate(0, 40);
+  }
+  
 }
 
 
@@ -66,9 +74,9 @@ void draw()
 void drawFuckingLines()
 {
   //pushMatrix();
-  stroke(random(10, 80), random(10, 80), random(100, 200), fuckT);
-  strokeWeight(1.5);
-  line(random(-2000, 2000), random(-2000, 2000), random(-2000, 2000), random(-2000, 2000)); 
+  //stroke(random(10, 80), random(10, 80), random(100, 200), fuckT);
+  //strokeWeight(1.5);
+  line(random(-2000, 2000), random(2000, -50), random(2000, 20000), random(50, 50)); 
   fuckT = fuckT - 0.03;
   //popMatrix();
 }
