@@ -9,13 +9,47 @@ void setup()
   size (400, 530);
   background(255);
   
+  translate(width/2, height/2);
+  scale(.6);
+  float theta = 0.0;
+  float theta1 = 0.0;
+  float theta2 = 0.0;
+  float theta3 = 0.0;
+  float theta4 = 0.0;
+  float theta5 = 0.0;
+  float theta6 = 0.0;
+  stroke(0, 30);
+  noFill();
+
+
+  for (int i = 0; i< 500; i ++)
+  {
+    float r = tan(theta1)*1250;
+    triangle(i*2, 0, r, r, i, i);
+    theta1 += PI/180/(500.0/180.0);
+  }
+
+  for (int i = 0; i< 500; i ++)
+  {
+    float r = sin(theta2)*1250;
+    triangle(i*2, 0, r, r, i, i);
+    theta2 += PI/180/(900.0/180.0);
+  }
+
+  for (int i = 0; i< 500; i ++)
+  {
+    float r = cos(theta3)*500;
+    triangle(i*2, 0, r, r, i, i);
+    theta3 += PI/180/(500.0/180.0);
+  }
+  
 }
 
 void draw()
 {
 
    //drawFuckingRects();
-      drawFuckingLines();
+      //drawFuckingLines();
 
 }
 
@@ -23,7 +57,7 @@ void draw()
 void drawFuckingLines()
 {
   //pushMatrix();
-  stroke(random(10, 80), random(10, 80), random(10, 80), fuckT);
+  stroke(random(10, 80), random(10, 80), random(100, 200), fuckT);
   strokeWeight(1.5);
   line(random(-2000, 2000), random(-2000, 2000), random(-2000, 2000), random(-2000, 2000)); 
   fuckT = fuckT - 0.03;
